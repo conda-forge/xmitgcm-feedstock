@@ -1,5 +1,5 @@
 {% set name = "xmitgcm" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66d427b7ca2d26345695e8e645aa0ea2a86d39cccaf34b68d51cc4d76eaf067d
+  sha256: d98533afa46f005727bb12d2bd9677c8d51db6ed9394a997b9781db2b4365a0f
 
 build:
   number: 0
