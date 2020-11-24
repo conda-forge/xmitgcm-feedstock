@@ -1,5 +1,5 @@
 {% set name = "xmitgcm" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d98533afa46f005727bb12d2bd9677c8d51db6ed9394a997b9781db2b4365a0f
+  sha256: f6caa8f0b077341f2870a5f0b95c9c49e5cec89e027ebb4105ddf7a25f39a8c3
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ test:
 about:
   home: https://github.com/xgcm/xmitgcm
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
 # next release will not need to manually package the license_file
   summary: Read MITgcm mds binary files into xarray
   dev_url: https://github.com/xgcm/xmitgcm
