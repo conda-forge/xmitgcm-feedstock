@@ -10,7 +10,7 @@ source:
   sha256: f6caa8f0b077341f2870a5f0b95c9c49e5cec89e027ebb4105ddf7a25f39a8c3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -24,6 +24,7 @@ requirements:
     - xarray >=0.10.1
     - dask >=0.12
     - numpy
+    - cachetools
 
 test:
   imports:
