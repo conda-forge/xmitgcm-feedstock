@@ -1,5 +1,5 @@
 {% set name = "xmitgcm" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f6caa8f0b077341f2870a5f0b95c9c49e5cec89e027ebb4105ddf7a25f39a8c3
+  sha256: 5da802abfc22f407e4cab5f49367606c4278d08099f59e8f7f4530a95cb0c2eb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
