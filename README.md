@@ -1,7 +1,7 @@
 About xmitgcm
 =============
 
-Home: https://github.com/xgcm/xmitgcm
+Home: https://github.com/mitgcm/xmitgcm
 
 Package license: MIT
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xmitgcm-feedsto
 
 Summary: Read MITgcm mds binary files into xarray
 
-Development: https://github.com/xgcm/xmitgcm
+Development: https://github.com/mitgcm/xmitgcm
 
 Documentation: https://xmitgcm.readthedocs.io/
 
