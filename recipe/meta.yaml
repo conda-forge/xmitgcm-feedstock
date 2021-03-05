@@ -34,12 +34,12 @@ test:
     - xmitgcm
 
 about:
-  home: https://github.com/xgcm/xmitgcm
+  home: https://github.com/mitgcm/xmitgcm
   license: MIT
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
 # next release will not need to manually package the license_file
   summary: Read MITgcm mds binary files into xarray
-  dev_url: https://github.com/xgcm/xmitgcm
+  dev_url: https://github.com/mitgcm/xmitgcm
   doc_url: https://xmitgcm.readthedocs.io/
 
 extra:
