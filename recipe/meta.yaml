@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >= 3.7
+    - python >=3.7
     - pip
     - pytest-runner
   run:
-    - python >= 3.7
+    - python >=3.7
     - xarray >=0.10.1
     - dask >=0.12
     - numpy
