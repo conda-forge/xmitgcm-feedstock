@@ -25,6 +25,9 @@ requirements:
     - dask >=0.12
     - numpy
     - cachetools
+    - packaging
+    - fsspec
+    - zarr
 
 test:
   imports:
