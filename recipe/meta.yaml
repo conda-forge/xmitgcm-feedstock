@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -21,8 +21,8 @@ requirements:
     - pytest-runner
   run:
     - python >=3.7
-    - xarray >=0.10.1
-    - dask >=0.12
+    - xarray >=0.11
+    - dask >=1.0
     - numpy
     - cachetools
     - packaging
@@ -32,12 +32,15 @@ requirements:
 test:
   imports:
     - xmitgcm
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/mitgcm/xmitgcm
   license: MIT
-  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
-# next release will not need to manually package the license_file
+  license_file: LICENSE
   summary: Read MITgcm mds binary files into xarray
   dev_url: https://github.com/mitgcm/xmitgcm
   doc_url: https://xmitgcm.readthedocs.io/
