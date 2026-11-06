@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  version: "0.5.3"
+
+package:
+  name: xmitgcm
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/x/xmitgcm/xmitgcm-${{ version }}.tar.gz
+  sha256: 221b659f176c7e71228e597dd28b627bc4e86412b28b5009a3624a8a70bbe2cd
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=42
+    - setuptools-scm
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - dask-core >=1.0
+    - xarray >=0.11
+    - numpy
+    - cachetools
+    - packaging
+    - fsspec
+    - zarr
+
+tests:
+  - python:
+      imports:
+        - xmitgcm
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Read MITgcm MDS binary files using xarray
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/MITgcm/xmitgcm
+  documentation: https://xmitgcm.readthedocs.io/
+  repository: https://github.com/mitgcm/xmitgcm
+
+extra:
+  recipe-maintainers:
+    - raphaeldussin
+    - ocefpaf
+    - jbusecke
+    - rabernat
+    - timothyas
