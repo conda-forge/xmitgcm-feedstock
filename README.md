@@ -3,11 +3,11 @@ About xmitgcm-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xmitgcm-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/mitgcm/xmitgcm
+Home: https://github.com/MITgcm/xmitgcm
 
 Package license: MIT
 
-Summary: Read MITgcm mds binary files into xarray
+Summary: Read MITgcm MDS binary files using xarray
 
 Development: https://github.com/mitgcm/xmitgcm
 
